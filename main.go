@@ -2,23 +2,10 @@ package main
 
 import (
 	"fmt"
-	"net/http"
+
+	"context"
 )
 
 func main() {
 
-	server := &http.Server{
-		Addr:    ":3000",
-		Handler: http.HandlerFunc(basicHandler),
-	}
-
-	err := server.ListenAndServe()
-
-	if err != nil {
-		fmt.Print("Failed to listen to ser", err)
-	}
-}
-
-func basicHandler(w http.ResponseWriter, r *http.Request) {
-	w.Write([]byte("Hello World"))
 }
